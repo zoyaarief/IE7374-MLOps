@@ -1,0 +1,22 @@
+services:
+  airflow:
+    build: .
+    command: standalone
+    environment:
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "true"
+      PYTHONPATH: /opt/airflow/dags
+      AIRFLOW_LAB_DATA_DIR: /opt/airflow/data
+      AIRFLOW_LAB_ARTIFACT_DIR: /opt/airflow/artifacts
+    ports:
+      - "8080:8080"
+    user: "${AIRFLOW_UID:-50000}:0"
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./data:/opt/airflow/data:ro
+      - ./artifacts:/opt/airflow/artifacts
+      - ./logs:/opt/airflow/logs
+      - airflow_metadata:/opt/airflow
+
+volumes:
+  airflow_metadata:
