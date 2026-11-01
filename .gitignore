@@ -4,3 +4,6 @@ __pycache__/
 .pytest_cache/
 .DS_Store
 pytest-report.xml
+lab_03/.venv/
+__pycache__/
+.pytest_cache/

@@ -1,0 +1,25 @@
+{
+  "version": "20261101T225234644562Z",
+  "dataset": "sklearn_wine",
+  "selected_model": "logistic_regression",
+  "selection_metric": "cv_f1_macro_mean",
+  "random_state": 42,
+  "test_size": 0.2,
+  "cv_folds": 5,
+  "train_samples": 142,
+  "test_samples": 36,
+  "python_version": "3.13.5",
+  "sklearn_version": "1.9.1",
+  "comparison": {
+    "logistic_regression": {
+      "cv_accuracy_mean": 0.9790640394088669,
+      "cv_f1_macro_mean": 0.9796369712159185,
+      "cv_f1_macro_std": 0.027282763728174786
+    },
+    "random_forest": {
+      "cv_accuracy_mean": 0.9790640394088669,
+      "cv_f1_macro_mean": 0.9789226855016329,
+      "cv_f1_macro_std": 0.028548411231649046
+    }
+  }
+}
